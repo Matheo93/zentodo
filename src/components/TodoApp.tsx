@@ -219,7 +219,7 @@ export function TodoApp() {
       />
 
       <div className="mx-auto max-w-lg">
-        <div className="absolute right-4 top-4 flex items-center gap-2 sm:right-8 sm:top-8">
+        <div className="absolute right-2 top-2 flex items-center gap-1 sm:right-8 sm:top-8 sm:gap-2">
           <UndoRedoButtons
             onUndo={undo}
             onRedo={redo}
@@ -230,7 +230,7 @@ export function TodoApp() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => setShowFocusMode(true)}
-            className="flex h-10 w-10 items-center justify-center rounded-xl bg-accent text-white hover:bg-accent-hover transition-colors"
+            className="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-xl bg-accent text-white hover:bg-accent-hover transition-colors"
             aria-label="Enter focus mode"
             title="Focus Mode (Pomodoro)"
           >
@@ -240,7 +240,7 @@ export function TodoApp() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => setShowSearch(!showSearch)}
-            className={`flex h-10 w-10 items-center justify-center rounded-xl border transition-colors ${
+            className={`flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-xl border transition-colors ${
               showSearch
                 ? "bg-accent text-white border-accent"
                 : "bg-card border-border text-muted hover:text-foreground hover:border-accent"
@@ -254,7 +254,7 @@ export function TodoApp() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => setShowStats(true)}
-            className="flex h-10 w-10 items-center justify-center rounded-xl bg-card border border-border text-muted hover:text-foreground hover:border-accent transition-colors"
+            className="hidden sm:flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-xl bg-card border border-border text-muted hover:text-foreground hover:border-accent transition-colors"
             aria-label="Show statistics"
             title="Productivity Stats"
           >
@@ -264,7 +264,7 @@ export function TodoApp() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => setShowShortcuts(true)}
-            className="flex h-10 w-10 items-center justify-center rounded-xl bg-card border border-border text-muted hover:text-foreground hover:border-accent transition-colors"
+            className="hidden sm:flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-xl bg-card border border-border text-muted hover:text-foreground hover:border-accent transition-colors"
             aria-label="Show keyboard shortcuts"
           >
             <Keyboard size={18} />

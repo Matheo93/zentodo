@@ -57,13 +57,13 @@ export function DataActions({ todos, onImport }: DataActionsProps) {
   };
 
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex items-center gap-1 sm:gap-2">
       <motion.button
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         onClick={handleExport}
         disabled={todos.length === 0}
-        className="flex items-center gap-2 rounded-lg bg-card border border-border px-3 py-2 text-sm text-muted hover:text-foreground hover:border-accent transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+        className="hidden sm:flex items-center gap-2 rounded-lg bg-card border border-border px-3 py-2 text-sm text-muted hover:text-foreground hover:border-accent transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
         aria-label="Export tasks as JSON"
       >
         <Download size={16} />
@@ -74,7 +74,7 @@ export function DataActions({ todos, onImport }: DataActionsProps) {
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         onClick={() => fileInputRef.current?.click()}
-        className="flex items-center gap-2 rounded-lg bg-card border border-border px-3 py-2 text-sm text-muted hover:text-foreground hover:border-accent transition-colors"
+        className="hidden sm:flex items-center gap-2 rounded-lg bg-card border border-border px-3 py-2 text-sm text-muted hover:text-foreground hover:border-accent transition-colors"
         aria-label="Import tasks from JSON"
       >
         <Upload size={16} />

@@ -17,13 +17,13 @@ export function UndoRedoButtons({
   canRedo,
 }: UndoRedoButtonsProps) {
   return (
-    <div className="flex items-center gap-1">
+    <div className="hidden sm:flex items-center gap-1">
       <motion.button
         whileHover={canUndo ? { scale: 1.05 } : undefined}
         whileTap={canUndo ? { scale: 0.95 } : undefined}
         onClick={onUndo}
         disabled={!canUndo}
-        className="flex h-10 w-10 items-center justify-center rounded-xl bg-card border border-border text-muted hover:text-foreground hover:border-accent transition-colors disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:border-border disabled:hover:text-muted"
+        className="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-xl bg-card border border-border text-muted hover:text-foreground hover:border-accent transition-colors disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:border-border disabled:hover:text-muted"
         aria-label="Undo (Ctrl+Z)"
         title="Undo (Ctrl+Z)"
       >
@@ -34,7 +34,7 @@ export function UndoRedoButtons({
         whileTap={canRedo ? { scale: 0.95 } : undefined}
         onClick={onRedo}
         disabled={!canRedo}
-        className="flex h-10 w-10 items-center justify-center rounded-xl bg-card border border-border text-muted hover:text-foreground hover:border-accent transition-colors disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:border-border disabled:hover:text-muted"
+        className="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-xl bg-card border border-border text-muted hover:text-foreground hover:border-accent transition-colors disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:border-border disabled:hover:text-muted"
         aria-label="Redo (Ctrl+Y)"
         title="Redo (Ctrl+Y)"
       >

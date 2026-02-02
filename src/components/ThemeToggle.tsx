@@ -15,7 +15,7 @@ export function ThemeToggle() {
 
   if (!mounted) {
     return (
-      <div className="h-10 w-10 rounded-xl bg-border animate-pulse" />
+      <div className="h-8 w-8 sm:h-10 sm:w-10 rounded-xl bg-border animate-pulse" />
     );
   }
 
@@ -26,7 +26,7 @@ export function ThemeToggle() {
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       onClick={() => setTheme(isDark ? "light" : "dark")}
-      className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-card border border-border hover:border-accent transition-colors"
+      className="relative flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-xl bg-card border border-border hover:border-accent transition-colors"
       aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
     >
       <AnimatePresence mode="wait" initial={false}>
